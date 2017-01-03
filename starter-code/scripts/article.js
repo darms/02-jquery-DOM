@@ -1,14 +1,19 @@
 var articles = [];
 
 function Article (options) {
-/* TODO: This is our Model constructor. It will take in
+/* TODO: DONE This is our Model constructor. It will take in
    our source data from blogArticles and instantiate a
    new Object according to this new definition. options is
    a placeholder for the object that will ultimately be
    passed in. Use all of the properties in blogArticles
    to populate the new Article data that we'll use.  */
-   this.title = options.title;
-};
+  this.body = options.body;
+  this.publishedOn = options.pubilshedOn;
+  this.authorUrl = options.authorUrl;
+  this.author = options.author;
+  this.category = options.category;
+  this.title = options.title;
+}
 
 Article.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
